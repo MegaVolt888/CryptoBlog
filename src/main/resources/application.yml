@@ -1,0 +1,58 @@
+spring:
+  datasource:
+#    url: jdbc:postgresql://192.168.0.100:5432/cryptoblog
+    url: jdbc:postgresql://localhost:15432/cryptoblog
+    initialization-mode: always
+    driverClassName: org.postgresql.Driver
+#    type: org.mariadb.jdbc.MariaDbDataSource
+    username: cryptoblog
+    password: test02
+#    schema:
+#      - classpath:schema.sql
+#    data:
+#      - classpath:data.sql
+  resources:
+    static-locations: classpath:static
+  mail:
+    host: smtp.yandex.ru
+    port: 465
+    username: registration@sorokinkv.ru
+    password: ENC(7qSzKDgB9LCMZoBsWEOnrTDgX+zMLkb3)
+    protocol: smtps
+    default-encoding: UTF-8
+
+  jpa:
+    generate-ddl: true
+    hibernate:
+      ddl-auto: update
+#      connection:
+#        charset: utf8
+#        useUnicode: true
+#    properties.hibernate.dialect: org.hibernate.dialect.MariaDB10Dialect
+    show-sql: true
+
+# sorokinkv.ru
+
+custom:
+  main:
+    domain: https://sorokinkv.ru
+
+
+
+logging:
+  level:
+    ROOT: INFO
+
+
+#web:
+#  classpath:
+#     resource:
+#       location: classpath:/public/
+#  index:
+#    location: /public/index.html
+#  api:
+#    path: api
+
+#  cors:
+#    allowed:
+#      origins: *
